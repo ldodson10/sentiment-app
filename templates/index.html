@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Emotional Feed</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -32,21 +33,47 @@
     .entry time {
       font-size: 0.9em;
       color: #666;
-    }
+      }
     .entry pre {
       background: #f0f0f0;
       padding: 10px;
       border-radius: 5px;
       overflow-x: auto;
     }
+    .scoreboard {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      z-index: 9999;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .scoreboard h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .scoreboard p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Floating Scoreboard -->
+  <div class="scoreboard">
+    <h4>📊 Mood Scoreboard</h4>
+    <canvas id="sentimentChart" width="200" height="200"></canvas>
+  </div>
+
   <h1>How Are You Feeling?</h1>
 
   <form method="POST" action="/analyze">
-    <textarea name="text" placeholder="Write your thoughts here..."></textarea><br>
+        <textarea name="text" placeholder="Write your thoughts here..."></textarea><br>
     <button type="submit">Analyze</button>
   </form>
 
@@ -64,5 +91,29 @@
     <p>No entries yet.</p>
   {% endfor %}
 
+  <script>
+    const ctx = document.getElementById('sentimentChart').getContext('2d');
+    const sentimentChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Positive 😊', 'Neutral 😐', 'Negative 😡'],
+        datasets: [{
+          label: 'Sentiments',
+          data: [{{ total_positive }}, {{ total_neutral }}, {{ total_negative }}],
+          backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
+          borderColor: ['#388E3C', '#FFA000', '#D32F2F'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+    </script>
 </body>
 </html>
