@@ -70,13 +70,13 @@ After resolving the `textblob.exceptions.MissingCorpusError` and restoring Flask
 ### 🧩 Test Inputs
 
 1. **Positive**
-   > “I feel deeply grateful for the TKH Cybersecurity Fellowship and inspired after speaking with a Career Specialist, whose wisdom and guidance have filled me with clarity and renewed motivation.”
+   > "I feel deeply grateful for the TKH Cybersecurity Fellowship and inspired after speaking with a Career Specialist, whose wisdom and guidance have filled me with clarity and renewed motivation."
 
 2. **Neutral**
-   > “I am thankful for the TKH Cybersecurity Fellowship, and my recent conversation with a Career Specialist offered helpful insights that clarified my next professional steps.”
+   > "I am thankful for the TKH Cybersecurity Fellowship, and my recent conversation with a Career Specialist offered helpful insights that clarified my next professional steps."
 
 3. **Negative (Expected)**
-   > “Although I’m grateful for the TKH Cybersecurity Fellowship, I felt discouraged after realizing how much I still have to learn despite my Career Specialist’s efforts to guide me.”
+   > "Although I'm grateful for the TKH Cybersecurity Fellowship, I felt discouraged after realizing how much I still have to learn despite my Career Specialist's efforts to guide me."
 
 ---
 
@@ -107,7 +107,7 @@ After resolving the `textblob.exceptions.MissingCorpusError` and restoring Flask
 
 ### 🧭 Observations
 
-TextBlob’s sentiment analyzer displays a consistent **bias toward positive classification** when sentences contain gratitude-oriented or reflective language.  
+TextBlob's sentiment analyzer displays a consistent **bias toward positive classification** when sentences contain gratitude-oriented or reflective language.  
 This demonstrates a common limitation of **rule-based sentiment models**: they evaluate polarity primarily through individual words rather than contextual nuance.
 
 **Future Improvement:** integrate a **Transformer-based NLP model** such as `DistilBERT`, `RoBERTa`, or `VADER` to provide deeper contextual comprehension and more accurate classification of mixed or ambiguous emotional expressions.
