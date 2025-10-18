@@ -137,6 +137,16 @@ _This roadmap ensures that the Sentiment App continues to evolve as a scalable, 
 **Project Repository:** [https://github.com/ldodson10/sentiment-app](https://github.com/ldodson10/sentiment-app)  
 **Status:** ✅ Functional — Verified local Flask execution, Render deployment, and sentiment classification results.
 
+### ✅ Render Deployment Verification
+
+The Render service and URL were verified as active on **October 18, 2025**.
+
+| Evidence | Description |
+|-----------|--------------|
+| ![Render Project Active](./docs/results/Render_Project_Active_SentimentApp.png) | Render dashboard showing all services up and running. |
+| ![Render URL Validation](./docs/results/Render_URL_Validation_SentimentApp.png) | Successful access of deployed app via Render URL. |
+
+_The deployment confirms the Sentiment App is live and functional on Render’s Free Tier environment._
 
 _This project represents an applied demonstration of natural language processing (NLP) and cloud deployment fundamentals, integrating model testing, debugging, and performance validation._
 
