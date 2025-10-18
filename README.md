@@ -13,6 +13,9 @@
 
 - **[Render](https://render.com)** Cloud Hosting — Deployed the Flask application via Render for continuous integration and delivery (CI/CD) directly from GitHub.
 
+
+
+
 🚀 How to Run Locally
 1. Clone the repository
 git clone https://github.com/ldodson10/sentiment-app.git
@@ -26,6 +29,7 @@ pip install -r requirements.txt
 python app.py
 Visit http://localhost:5000 in your browser.
 
+
 ☁️ Deployment with Render
 This project is deployed using Render, a cloud hosting platform that enables developers to launch web applications with ease.
 
@@ -35,6 +39,8 @@ Render simplifies the process of hosting and running backend applications like t
 🔧 Workflow Overview
 GitHub is used to store, version, and manage the project code.
 Render connects to the GitHub repository, builds the application, and hosts it live.
+
+---
 
 ## 🧪 Deployment Verification
 
@@ -110,7 +116,31 @@ After resolving the `textblob.exceptions.MissingCorpusError` and restoring Flask
 TextBlob's sentiment analyzer displays a consistent **bias toward positive classification** when sentences contain gratitude-oriented or reflective language.  
 This demonstrates a common limitation of **rule-based sentiment models**: they evaluate polarity primarily through individual words rather than contextual nuance.
 
-**Future Improvement:** integrate a **Transformer-based NLP model** such as `DistilBERT`, `RoBERTa`, or `VADER` to provide deeper contextual comprehension and more accurate classification of mixed or ambiguous emotional expressions.
+### 🚀 **Future Improvements**
+
+- **Enhanced Sentiment Modeling** — Integrate advanced Transformer-based models such as [DistilBERT](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english), [RoBERTa](https://huggingface.co/roberta-base), or [VADER](https://github.com/cjhutto/vaderSentiment) for improved contextual understanding and more accurate classification of nuanced emotions.  
+- **User Authentication** — Implement secure user login and personalized dashboards to track sentiment history across multiple sessions.  
+- **Data Visualization Dashboard** — Add interactive charts and graphs (using [Plotly](https://plotly.com/python/) or [Chart.js](https://www.chartjs.org/)) to visualize overall sentiment trends and distribution over time.  
+- **Multilingual Support** — Extend TextBlob or Hugging Face pipelines to support additional languages, enhancing inclusivity and global usability.  
+- **Automated Testing & CI/CD Pipeline** — Integrate [GitHub Actions](https://github.com/features/actions) to automate testing, linting, and deployments to Render with every push.  
+- **Containerization** — Package the application using [Docker](https://www.docker.com) for consistent environment replication and seamless deployment to other platforms.  
+- **API Endpoint Expansion** — Develop RESTful API endpoints for third-party integration, enabling external systems to submit text and retrieve sentiment results programmatically.
+
+
+_This roadmap ensures that the Sentiment App continues to evolve as a scalable, intelligent, and production-ready NLP application._
+
+---
+
+### 🪶 **Author & Verification**
+
+**Developed by:** [Latrisha Dodson](https://github.com/ldodson10)  
+**Project Repository:** [https://github.com/ldodson10/sentiment-app](https://github.com/ldodson10/sentiment-app)  
+**Status:** ✅ Functional — Verified local Flask execution, Render deployment, and sentiment classification results.
+
+
+_This project represents an applied demonstration of natural language processing (NLP) and cloud deployment fundamentals, integrating model testing, debugging, and performance validation._
+
+---
 
 _Updated and verified: October 18, 2025 — Functional Sentiment App deployment confirmed on Render and localhost._
 
