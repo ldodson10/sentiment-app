@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 50px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .result-box {
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sentiment {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #007BFF;
+        }
+        a {
+            display: block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>Sentiment Analysis Result</h1>
+        <p>The sentiment of your text is:</p>
+        <div class="sentiment">{{ sentiment }}</div>
+        <a href="/">Analyze Another Text</a>
+    </div>
+</body>
+</html>
